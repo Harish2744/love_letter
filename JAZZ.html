@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>For Jyoti — From Harish</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&family=Open+Sans&display=swap" rel="stylesheet" />
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    background: linear-gradient(135deg, #f9ecec 0%, #f8e1e7 100%);
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column;
+    color: #6b3a3a;
+    user-select: none;
+  }
+
+  /* Sparkles background */
+  .sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #ffd9e1;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: sparkleAnim 3s infinite ease-in-out alternate;
+  }
+  @keyframes sparkleAnim {
+    from {opacity: 0.2; transform: scale(0.7);}
+    to {opacity: 1; transform: scale(1.3);}
+  }
+
+  /* Container */
+  #container {
+    max-width: 720px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Title */
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+  }
+  h2 {
+    font-family: 'Indie Flower', cursive;
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /* Letter box */
+  #letter {
+    background: #fff4f4;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(107, 58, 58, 0.25);
+    padding: 30px 40px;
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+    color: #6b3a3a;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    min-height: 230px;
+    margin-bottom: 20px;
+    border: 2px solid #f8a1b3;
+    position: relative;
+    overflow-wrap: break-word;
+    display: none;
+  }
+
+  /* Typewriter cursor */
+  #letter::after {
+    content: '|';
+    animation: blinkCursor 1.2s infinite;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    font-weight: bold;
+    color: #a65a6d;
+  }
+  @keyframes blinkCursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Heart button */
+  #heart-btn {
+    font-size: 1.5rem;
+    color: #e3486d;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+    display: none;
+  }
+  #heart-btn:hover {
+    transform: scale(1.2) rotate(-10deg);
+  }
+
+  /* Secret message */
+  #secret-msg {
+    max-width: 600px;
+    margin: 25px auto 10px;
+    background: #ffd9e1;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.3rem;
+    color: #6b3a3a;
+    line-height: 1.5;
+    display: none;
+    user-select: text;
+  }
+
+  /* Signature */
+  #signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    color: #8b3a3a;
+    display: none;
+  }
+
+  /* Open screen */
+  #open-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #f8a1b3 0%, #e3486d 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 999;
+  }
+  #open-screen h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  #open-btn {
+    background: white;
+    color: #e3486d;
+    border: none;
+    border-radius: 40px;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  #open-btn:hover {
+    background: #f8a1b3;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    h1 { font-size: 2.5rem; }
+    #letter { font-size: 1.2rem; padding: 20px 25px; }
+    #heart-btn { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div id="open-screen">
+    <h1>💌 Letter for Jyoti 💌</h1>
+    <h2>THIS LETTER BELONGS TO MY QUEEN JAZZ</h2>
+    <button id="open-btn">Open Letter</button>
+  </div>
+
+  <div id="container" aria-live="polite">
+    <h1>For Jyoti ❤️</h1>
+    <h2>From Harish — Across the Miles</h2>
+
+    <div id="letter"></div>
+
+    <div id="heart-btn" title="Click for a surprise!">❤️
+      <button id="open-btn">PRESS HERE</button>❤️
+    </div>
+
+    <div id="secret-msg" role="region" aria-label="Secret message">
+      My innocent Jyoti,<br>
+      Please try to mark my words<br>
+      Believe me JAZZ, I seriously fall in love with you<br>
+      I want to dedicate something, I feel for you, <br>
+      I request you to please understand my feeling for you<br><br>
+      
+      Though miles apart, our hearts still meet,<br>
+      In every message, in each heartbeat.<br>
+      Distance is long, but hearts make it near,<br>
+      You’re all that I want, my forever, my dear.<br><br>
+      
+      I journey abroad for studies, it’s true,<br>
+      But each step I take is for a life with you.<br>
+      Not for adventure in someone else’s eyes,<br>
+      But to build a tomorrow where our sun will rise.<br><br>
+      
+      I’ll not date others, no matter the chance,<br>
+      For my heart is sealed in your sweet romance.<br>
+      No girl can tempt me, no beauty compare,<br>
+      To the bond that we cherish, the love that we share.<br><br>
+      
+      These years apart may feel so tough,<br>
+      But our connection is stronger, unshaken, enough.<br>
+      We’re proving together, across time and space,<br>
+      That true love survives every trial it may face.<br><br>
+      
+      So hold my promise, let worries release,<br>
+      My love is your shelter, my vow is your peace.<br>
+      When I return, our dreams will unfold,<br>
+      A future together, more precious than gold. 💖<br><br>
+      
+      I love you so much my future wife Mrs. Maitry<br>
+      Yours forever,<br>
+      Harish 💖
+    </div>
+
+    <div id="signature">— Harish</div>
+  </div>
+
+  <!-- Hidden audio for background music -->
+  <audio id="bg-music" loop>
+    <source src="eminem-mockingbird-karaoke-version_qxhoyqZ3.mp3" type="audio/mpeg">
+    <source src="your-music-file.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+<script>
+  const openScreen = document.getElementById('open-screen');
+  const openBtn = document.getElementById('open-btn');
+  const letterEl = document.getElementById('letter');
+  const heartBtn = document.getElementById('heart-btn');
+  const secretMsg = document.getElementById('secret-msg');
+  const signature = document.getElementById('signature');
+  const music = document.getElementById('bg-music');
+
+  const letterText = `My dearest Jyoti,\n\nDistance means little when someone means so much.\n\nEvery morning I wake up grateful for you,\nAnd every night I fall asleep dreaming of the day we reunite.\n\nThough miles stretch between us, my heart beats only for you.\n\nI love you so much JAZZ.\n\nYour Beloved,\nHarish`;
+
+  let idx = 0;
+
+  function typeWriter() {
+    if (idx < letterText.length) {
+      letterEl.textContent += letterText.charAt(idx);
+      idx++;
+      setTimeout(typeWriter, 60);
+    } else {
+      signature.style.display = 'block';
+      heartBtn.style.display = 'inline-block';
+    }
+  }
+
+  openBtn.addEventListener('click', () => {
+    openScreen.style.display = 'none';
+    letterEl.style.display = 'block';
+    typeWriter();
+    createSparkles(35);
+
+    // Play music when letter opens
+    music.play().catch(err => {
+      console.log("Autoplay blocked until user interacts:", err);
+    });
+  });
+
+  heartBtn.addEventListener('click', () => {
+    if (secretMsg.style.display === 'none' || secretMsg.style.display === '') {
+      secretMsg.style.display = 'block';
+      heartBtn.style.color = '#a63149';
+    } else {
+      secretMsg.style.display = 'none';
+      heartBtn.style.color = '#e3486d';
+    }
+  });
+
+  // Sparkles floating animation
+  function createSparkles(count) {
+    for (let i = 0; i < count; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = Math.random() * window.innerWidth + 'px';
+      sparkle.style.top = Math.random() * window.innerHeight + 'px';
+      sparkle.style.animationDelay = (Math.random() * 3) + 's';
+      sparkle.style.animationDuration = 2 + Math.random() * 2 + 's';
+      document.body.appendChild(sparkle);
+    }
+  }
+</script>
+
+</body>
+</html>
+```
